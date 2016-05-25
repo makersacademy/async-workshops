@@ -1,255 +1,331 @@
 # Train your skill in following the flow of control while understanding the concept of callbacks
 
-In this workshop, you'll improve your understanding of three things:
+## Workshop objectives
 
-// 1. Describe what control flow is.
-// 2. Explain how to follow the flow of control.
-// 3. Follow the flow of control to help you write and debug a callback.
+In this workshop, you'll aim to improve your ability to:
 
+1. Describe the flow of control of a program as the order that pieces of the code are executed.
+2. Explain how to follow the flow of control.
+3. Follow the flow of control to help you write and debug a callback.
+
+Is the purpose and subject of this workshop clear?
 
 ## Workshop structure
 
-### Preparation (5 mins)
+### Thumbs (1 min)
 
-* If you haven't got node installed, run `brew install node`.
+How confident are you in each of the three abilities above?
 
-* Create a file called `investigate.js` and put this code in it:
+By the end of the workshop, your thumbs will hopefully be a few notches higher.
 
-```
-console.log("hello!");
-```
+### Setup (5 mins)
 
-* Run `node investigate.js`.  You should see `hello!` written to the console.
+* Get your laptop.
 
-* Create a file called `log.txt` and save it.
+* Clone this repo to your computer.
 
-* Optional, but recommended.  Move your windows around so you have `log.txt`, `investigate.js` and your terminal on screen at the same time.
+* Open the `callbacks-workshop` directory.
+
+* Open a new web browser window and drop `index.html` onto it.
+
+* Open your browser developer console.  It should say `hello!`.
 
 ### Demo (15 mins)
 
-I'll examine code sample below and try to answer the question in the comment.  I'll keep a written log of everything I think and do.
+* Look at this program:
 
-My demo code sample:
+```js
+// alpha
 
+document.addEventListener("click", function() {
+  // bravo
+});
+
+// charlie
 ```
-// What output does this code produce? Why?
 
-function bar() {
-  return foo;
-  foo = 10;
-  function foo() {}
-  var foo = '11';
+* I want to understand the program's flow of control.  That is, I want to understand the order that the pieces of code are executed.
+
+* To prove my understanding, my goal is to make a list of all the comments in the program (alpha, bravo, charlie etc) through which the flow of control will pass.  I'll order the list to reflect the order that the pieces of code in the program are executed.
+
+* To build my intuition, I make a guess at the list before I run the code.
+
+* Then, I run the code and debug it to check and maybe correct my list of comments.
+
+* Look at the program below.  I repeat the process of understanding the flow of control.
+
+```js
+// alpha
+
+function runItForMe(functionToRun) {
+  // bravo
+
+  functionToRun();
+
+  // charlie
 };
 
-console.log(bar());
+// delta
+
+runItForMe(function() {
+  // echo
+});
+
+// foxtrot
 ```
+
+### Thumbs (1 min)
+
+How confident are you in each of the three abilities we started the workshop with?
 
 ### Workshop (30 mins)
 
-* Everyone bring your laptops.
+* Mary start timer.
 
-* Split into pairs.  One person is the investigator, the other is the observer.
+* Pair up.  Decide on a driver and navigator.  This will be a great opportunity to practice avoiding the breakdown of driver/navigator during  investigatory coding.
 
-* The investigator pastes Code Sample 1 (below) into `investigate.js`.  They try to answer the question in the comment.  They investigate by changing and running the code sample.
+* Open `callbacks-workshop/index.js` in your code editor.
 
-* The investigator spikes their investigation.  No TDD: we want a fast process for trying out ideas.
+* Copy the [question 1](#question-1) code below into `index.js`.
 
-* As the investigator investigates, they keep a written log of what they did and why. This can be an unstructured "thought soup".  The more detail the better.  (It's OK if the logging feels like it makes it harder to think!)
+* To run the code, refresh your browser.
 
-* The observer doesn't join in with the investigation.  Their laptop is closed.  But If they don't understand what the investigator is doing or why they are doing something, they ask the investigator to write more detailed log entries.
+* Follow the process outlined in the demo to understand the flow of control of the question code.
 
-* When the investigator has an answer to the question in the comment, they explain it to the observer.
+1. Before running the code, look at it and make a provisional list of comments (alpha, bravo, charlie etc) through which you think the flow of control will pass.
 
-* Once the investigation is over, the pair swap roles and move onto the next code sample.
+2. Introspect on the code to find out what pieces of code are run in what order: run the code, add print statements, use a debugger, whatever you like.
 
-* Do the code samples in order.  They build on each other. It's fine not to make it through all of them.
+3. If you find your list of comments is wrong, update it.
 
-* Save your logs!
+4. Keep going until your list is correct.
+
+* Swap driver and navigator and move onto question 2.
+
+* Mary wander around to check how people are doing.
 
 ### Plenary (15 mins)
 
-We'll come back together, collect some of our log entries on the board and discuss the successful and less successful processes we use to understand code.
+We'll come back together and talk about the questions we found interesting and any things that surprised us.
+
+### Thumbs (1 min)
+
+How confident are you in each of the three abilities we begain the workshop with?
 
 ### After the workshop
 
-* Try using the logging technique for your next debugging session.
+* A developer constantly thinks about the flow of their code.  Keep trying to improve your skill and intuition.
 
-* To understand more about closures, work through the rest of the code samples.
+* To understand more about callbacks, and to get more practice following the flow of control, complete the questions you didn't have time to do in the workshop.
 
-## Code samples
+## Questions
 
-### Code sample 1
+### Question 1
 
 ```js
-var variableA = 0;
+// alpha
 
-function functionA() {
-  // Can I access variableA on this line? For example, can I console.log it? Why?
+[0, 1, 2, 3, 4].map(function() {
+  // bravo
+});
+
+// charlie
+```
+
+### Question
+
+```js
+// alpha
+
+document.addEventListener("click", function() {
+  // bravo
+});
+
+// charlie
+
+document.addEventListener("keydown", function() {
+  // delta
+});
+
+// echo
+```
+
+### Question
+
+```js
+// alpha
+
+setTimeout(function() {
+  // bravo
+}, 1000);
+
+// charlie
+```
+
+### Question
+
+```js
+// alpha
+
+setTimeout(function() {
+  // bravo
+}, 1000);
+
+// charlie
+
+setTimeout(function() {
+  // delta
+}, 1000);
+
+// echo
+```
+
+### Question
+
+```js
+// alpha
+
+setTimeout(function() {
+  // bravo
+}, Math.random() * 1000);
+
+// charlie
+
+setTimeout(function() {
+  // delta
+}, Math.random() * 1000);
+
+// echo
+```
+
+### Question
+
+```js
+// alpha
+
+function runItForMe(functionToRun) {
+  // bravo
+
+  functionToRun();
+
+  // charlie
 };
 
-functionA();
+// delta
+
+runItForMe(function() {
+  // echo
+});
+
+// foxtrot
 ```
 
-### Code sample 2
+### Question
 
 ```js
-function functionA() {
-  var variableA = 0;
+function runItForMe(functionToRun) {
+  functionToRun();
 };
 
-functionA();
+// delta
 
-// Can I access variableA on this line? For example, can I console.log it? Why?
-```
+runItForMe(function(greeting) {
+  // echo
 
-### Code sample 3
+  if (greeting !== "hello") {
+    // foxtrot
 
-```js
-var variableA = 1;
+    throw new Error("No hello?");
 
-function functionA() {
-  variableA = 2;
-
-  // What value does variableA have on this line? Why?
-};
-
-functionA();
-
-// What value does variableA have on this line? Why?
-```
-
-### Code sample 4
-
-```js
-var variableA = 1;
-
-function functionA(variableA) {
-  // What value does variableA have on this line? Why?
-};
-
-functionA(2);
-```
-
-### Code sample 5
-
-```js
-var variableA = 1;
-
-function functionA() {
-  var variableA = 2;
-};
-
-functionA();
-
-// What value does variableA have on this line? Why?
-```
-
-### Code sample 6
-
-```js
-var variableA = 1;
-
-if (true) {
-  var variableA = 2;
-}
-
-// What value does variableA have on this line? Why?
-```
-
-### Code sample 7
-
-```js
-// What is printed when you run this code? Why?
-
-function makeAddingFunction(numberToAdd) {
-  function addingFunction(numberToAddTo) {
-    return numberToAdd + numberToAddTo;
-  };
-
-  return addingFunction;
-};
-
-var add4 = makeAddingFunction(4);
-
-console.log(add4(10));
-```
-
-### Code sample 8
-
-```js
-// What is printed when you run this code? Why?
-
-function makeAddingFunction(numberToAdd) {
-  function addingFunction(numberToAddTo) {
-    return numberToAdd + numberToAddTo;
-  };
-
-  numberToAdd = 6;
-
-  return addingFunction;
-};
-
-var add4 = makeAddingFunction(4);
-
-console.log(add4(10));
-```
-
-### Code sample 9
-
-```js
-// What is printed when you run this code? Why?
-
-var http = require("http");
-
-function makeRequest() {
-  var host = "google.com";
-
-  http.get({ host: host }, function() {
-    console.log("Successful request to " + host);
-  });
-
-  host = "somewhere else!";
-};
-
-makeRequest();
-```
-
-### Code sample 10
-
-```js
-// WTF?
-
-var http = require('http');
-
-function makeRequests() {
-  var urls = ["google.com"];
-
-  for (var i = 0; i < urls.length; i++) {
-    http.get({ host: urls[i] }, function() {
-      console.log("Successful request to " + urls[i]);
-    });
+    // golf
   }
-};
 
-makeRequests();
+  // hotel
+});
+
+// irene
 ```
 
-### Code sample 11
+### Question
 
 ```js
-// What is printed when you run this code? Why?
+// alpha
 
-var http = require('http');
-
-function makeRequests() {
-  var urls = ["google.com"];
-
-  urls.forEach(function(url) {
-    http.get({ host: url }, function() {
-      console.log("Successful request to " + url);
-    });
-  });
+function fn1() {
+  // bravo
 };
 
-makeRequests();
+// charlie
+
+function fn2(inFn) {
+  // delta
+
+  fn1 = inFn;
+
+  // echo
+};
+
+// foxtrot
+
+fn2(function() {
+  // golf
+});
+
+// hotel
+
+fn1();
+
+// irene
 ```
+
+### Question
+
+```js
+// alpha
+
+document.addEventListener("keyup", function(event) {
+  // bravo
+
+  var character = String.fromCharCode(event.keyCode);
+
+  // charlie
+
+  document.addEventListener("click", function() {
+    // delta
+  });
+
+  // echo
+});
+
+// foxtrot
+```
+
+### Question
+
+```js
+// alpha
+
+var request = new XMLHttpRequest();
+
+// bravo
+
+request.onreadystatechange = function() {
+  // charlie
+};
+
+// delta
+
+request.open("GET", "/");
+
+// echo
+
+request.send();
+
+// foxtrot
+```
+
+// tracing data through callbacks?
+// go into the problems that promises solve, or more talk about mechanics
+// no intro to console.log until next workshop
+// promises more about ......... make that the next skill
+// Maybe move var tracing to callbacks workshop and then focus promises workshop on the job readiness or curriculum point of promises
