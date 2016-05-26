@@ -4,7 +4,7 @@
 
 In this workshop, you'll aim to improve your ability to:
 
-1. Describe the flow of control of a program as the order that pieces of the code are executed.
+1. Describe "the flow of control of a program" as "the order in which the pieces of code are executed".
 2. Explain how to follow the flow of control.
 3. Follow the flow of control to help you write and debug a callback.
 
@@ -20,89 +20,60 @@ By the end of the workshop, your thumbs will hopefully be a few notches higher.
 
 ### Setup (5 mins)
 
-* Get your laptop.
-
-* Clone this repo to your computer.
-
-* Open the `callbacks-workshop` directory.
-
-* Open a new web browser window and drop `index.html` onto it.
-
-* Open your browser developer console.  It should say `hello!`.
+Clone the repo to your computer, open `callbacks-workshop/index.html` in your web browser.  It should say `hello!` in your browser developer console.  [More help](run-the-questions.md).
 
 ### Demo (15 mins)
 
-* Look at this program:
+* Look at this program.  I want to understand its flow of control.  See the [Process for understanding the flow of control](#process-for-understanding-the-flow-of-control)
+
+* [Demo of understanding the program's flow of control.]
 
 ```js
-// alpha
+var greeting;
 
 document.addEventListener("click", function() {
-  // bravo
+  console.log(greeting);
 });
 
-// charlie
+greeting = "Hi!";
 ```
 
-* I want to understand the program's flow of control.  That is, I want to understand the order that the pieces of code are executed.
+* Look at the program below.  I want to understand its flow of control.
 
-* To prove my understanding, my goal is to make a list of all the comments in the program (alpha, bravo, charlie etc) through which the flow of control will pass.  I'll order the list to reflect the order that the pieces of code in the program are executed.
-
-* To build my intuition, I make a guess at the list before I run the code.
-
-* Then, I run the code and debug it to check and maybe correct my list of comments.
-
-* Look at the program below.  I repeat the process of understanding the flow of control.
+* [Demo of understanding the program's flow of control]
 
 ```js
-// alpha
+var greeting;
 
 function runItForMe(functionToRun) {
-  // bravo
-
+  // add parens to invoke passed functionToRun
   functionToRun();
-
-  // charlie
 };
 
-// delta
+greeting = "Howdy";
 
 runItForMe(function() {
-  // echo
+  console.log(greeting);
 });
 
-// foxtrot
+greeting = "Heya";
 ```
 
 ### Thumbs (1 min)
 
-How confident are you in each of the three abilities we started the workshop with?
+How confident are you in each of the three abilities we talked about at the beginning of the workshop?
+
+(Hopefully thumbs have gone up for first two items.  If not, maybe try diagramming?)
 
 ### Workshop (30 mins)
 
-* Mary start timer.
+* Pair up.  Choose who will drive and who will navigate.  This will be a great opportunity to practice avoiding the breakdown of driver/navigator during  investigatory coding.  Remember the XP Values of communication, feedback, respect and courage.
 
-* Pair up.  Decide on a driver and navigator.  This will be a great opportunity to practice avoiding the breakdown of driver/navigator during  investigatory coding.
-
-* Open `callbacks-workshop/index.js` in your code editor.
-
-* Copy the [question 1](#question-1) code below into `index.js`.
-
-* To run the code, refresh your browser.
+* Put the code for question 1 (below) into `callbacks-workshop/index.js`.  Open `index.html` in your browser.  [More help](run-the-questions.md).
 
 * Follow the process outlined in the demo to understand the flow of control of the question code.
 
-1. Before running the code, look at it and make a provisional list of comments (alpha, bravo, charlie etc) through which you think the flow of control will pass.
-
-2. Introspect on the code to find out what pieces of code are run in what order: run the code, add print statements, use a debugger, whatever you like.
-
-3. If you find your list of comments is wrong, update it.
-
-4. Keep going until your list is correct.
-
 * Swap driver and navigator and move onto question 2.
-
-* Mary wander around to check how people are doing.
 
 ### Plenary (15 mins)
 
@@ -110,11 +81,19 @@ We'll come back together and talk about the questions we found interesting and a
 
 ### Thumbs (1 min)
 
-How confident are you in each of the three abilities we begain the workshop with?
+How confident are you in each of the three abilities we began the workshop with?
+
+### Process for understanding the flow of control
+
+1. Before running the code, make a provisional list of the lines or part-lines of code you think will get run in the order they will get run.
+
+2. Introspect on the code to find out if your list is correct: run the code, add print statements, use a debugger, whatever you like.
+
+3. If you find your list is wrong, update it.
 
 ### After the workshop
 
-* A developer constantly thinks about the flow of their code.  Keep trying to improve your skill and intuition.
+* A developer constantly thinks about the flow of their code.  Keep trying to improve this skill and intuition.
 
 * To understand more about callbacks, and to get more practice following the flow of control, complete the questions you didn't have time to do in the workshop.
 
@@ -122,210 +101,104 @@ How confident are you in each of the three abilities we begain the workshop with
 
 ### Question 1
 
-```js
-// alpha
+Terminology: synchronous.
 
-[0, 1, 2, 3, 4].map(function() {
-  // bravo
+```js
+var numbers = [0, 1, 2, 3, 4];
+
+var squares = numbers.map(function(number) {
+  return number;
 });
 
-// charlie
+console.log(squares);
 ```
 
-### Question
+### Question 2
+
+Terminology: event listener, document object model.
 
 ```js
 // alpha
+
+var keyCode;
 
 document.addEventListener("click", function() {
-  // bravo
+  console.log(keyCode);
 });
 
-// charlie
-
-document.addEventListener("keydown", function() {
-  // delta
+document.addEventListener("keydown", function(event) {
+  event.keyCode = event.keyCode;
 });
 
-// echo
+keyCode = 999999999;
 ```
 
-### Question
+### Question 3
+
+Terminology: event loop.
 
 ```js
-// alpha
+var greeting;
 
 setTimeout(function() {
-  // bravo
+  greeting = "Wotcha";
 }, 1000);
 
-// charlie
+greeting = "Yo";
 ```
 
-### Question
+### Question 4
+
+Terminology: event loop.
 
 ```js
-// alpha
+var greeting = "Hey";
 
 setTimeout(function() {
-  // bravo
-}, 1000);
-
-// charlie
-
-setTimeout(function() {
-  // delta
-}, 1000);
-
-// echo
-```
-
-### Question
-
-```js
-// alpha
-
-setTimeout(function() {
-  // bravo
+  greeting = "Who are you?";
 }, Math.random() * 1000);
 
-// charlie
-
 setTimeout(function() {
-  // delta
+  console.log(greeting);
 }, Math.random() * 1000);
-
-// echo
 ```
 
-### Question
+### Question 5
+
+Terminology: callback arguments.
 
 ```js
-// alpha
+var greeting;
 
-function runItForMe(functionToRun) {
-  // bravo
-
-  functionToRun();
-
-  // charlie
-};
-
-// delta
-
-runItForMe(function() {
-  // echo
-});
-
-// foxtrot
-```
-
-### Question
-
-```js
 function runItForMe(functionToRun) {
   functionToRun();
 };
-
-// delta
 
 runItForMe(function(greeting) {
-  // echo
-
   if (greeting !== "hello") {
-    // foxtrot
-
     throw new Error("No hello?");
-
-    // golf
   }
-
-  // hotel
 });
-
-// irene
 ```
 
-### Question
+### Question 6
+
+Terminology: closures, closed over variables, mutable state.
 
 ```js
-// alpha
+var greeting = "What's happening?";
 
 function fn1() {
-  // bravo
+  console.log(greeting);
 };
-
-// charlie
 
 function fn2(inFn) {
-  // delta
-
   fn1 = inFn;
-
-  // echo
 };
-
-// foxtrot
 
 fn2(function() {
-  // golf
-});
 
-// hotel
+});
 
 fn1();
-
-// irene
 ```
-
-### Question
-
-```js
-// alpha
-
-document.addEventListener("keyup", function(event) {
-  // bravo
-
-  var character = String.fromCharCode(event.keyCode);
-
-  // charlie
-
-  document.addEventListener("click", function() {
-    // delta
-  });
-
-  // echo
-});
-
-// foxtrot
-```
-
-### Question
-
-```js
-// alpha
-
-var request = new XMLHttpRequest();
-
-// bravo
-
-request.onreadystatechange = function() {
-  // charlie
-};
-
-// delta
-
-request.open("GET", "/");
-
-// echo
-
-request.send();
-
-// foxtrot
-```
-
-// tracing data through callbacks?
-// go into the problems that promises solve, or more talk about mechanics
-// no intro to console.log until next workshop
-// promises more about ......... make that the next skill
-// Maybe move var tracing to callbacks workshop and then focus promises workshop on the job readiness or curriculum point of promises
