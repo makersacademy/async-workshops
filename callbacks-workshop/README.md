@@ -107,7 +107,7 @@ Terminology: synchronous.
 var numbers = [0, 1, 2, 3, 4];
 
 var squares = numbers.map(function(number) {
-  return number;
+  return number * number;
 });
 
 console.log(squares);
@@ -118,8 +118,6 @@ console.log(squares);
 Terminology: event listener, document object model.
 
 ```js
-// alpha
-
 var keyCode;
 
 document.addEventListener("click", function() {
@@ -127,7 +125,7 @@ document.addEventListener("click", function() {
 });
 
 document.addEventListener("keydown", function(event) {
-  event.keyCode = event.keyCode;
+  keyCode = event.keyCode;
 });
 
 keyCode = 999999999;
@@ -141,7 +139,7 @@ Terminology: event loop.
 var greeting;
 
 setTimeout(function() {
-  greeting = "Wotcha";
+  console.log(greeting);
 }, 1000);
 
 greeting = "Yo";
@@ -168,7 +166,7 @@ setTimeout(function() {
 Terminology: callback arguments.
 
 ```js
-var greeting;
+var greeting = "";
 
 function runItForMe(functionToRun) {
   functionToRun();
@@ -197,7 +195,7 @@ function fn2(inFn) {
 };
 
 fn2(function() {
-
+  console.log("Alright?");
 });
 
 fn1();
