@@ -20,7 +20,7 @@ By the end of the workshop, your thumbs will hopefully be a few notches higher.
 
 ### Setup (5 mins)
 
-Clone the repo to your computer, open `callbacks-workshop/index.html` in your web browser.  It should say `hello!` in your browser developer console.  [More help](run-the-questions.md).
+Clone the repo to your computer and open `callbacks-workshop/index.html` in your web browser.  It should say `hello!` in your browser developer console.  [More help](run-the-question-code.md).
 
 ### Demo (15 mins)
 
@@ -69,7 +69,7 @@ How confident are you in each of the three abilities we talked about at the begi
 
 * Pair up.  Choose who will drive and who will navigate.  This will be a great opportunity to practice avoiding the breakdown of driver/navigator during  investigatory coding.  Remember the XP Values of communication, feedback, respect and courage.
 
-* Put the code for question 1 (below) into `callbacks-workshop/index.js`.  Open `index.html` in your browser.  [More help](run-the-questions.md).
+* Put the code for question 1 (below) into `callbacks-workshop/index.js`.  Open `index.html` in your browser.  [More help](run-the-question-code.md).
 
 * Follow the process outlined in the demo to understand the flow of control of the question code.
 

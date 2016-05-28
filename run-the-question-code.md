@@ -1,8 +1,8 @@
-# More help on getting the callbacks questions running.
+# More help on getting the question code running.
 
 * Clone this repo to your computer.
 
-* Open the `callbacks-workshop` directory.
+* Open either the `callbacks-workshop` or the `promises-workshop` directory, depending on which workshop you're in.
 
 * Open a new web browser window and drop `index.html` onto it.
 
