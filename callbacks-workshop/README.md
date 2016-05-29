@@ -1,16 +1,16 @@
 # Train your skill in following the flow of control while understanding the concept of callbacks
 
-## Workshop objectives
+## Abilities that this workshop focues on
 
-In this workshop, you'll aim to improve your ability to:
+In this workshop, you'll improve your ability to:
 
-1. Describe "the flow of control of a program" as "the order in which the pieces of code are executed".
+1. Describe "the flow of control of a program" as "the order in which pieces of code are executed".
 2. Explain how to follow the flow of control.
-3. Follow the flow of control to help you write and debug a callback.
+3. Follow the flow of control to help you understand callbacks.
 
 Is the purpose and subject of this workshop clear?
 
-## Workshop structure
+## Workshop (1 hour)
 
 ### Thumbs (1 min)
 
@@ -20,18 +20,22 @@ By the end of the workshop, your thumbs will hopefully be a few notches higher.
 
 ### Setup (5 mins)
 
-Clone the repo to your computer and open `callbacks-workshop/index.html` in your web browser.  It should say `hello!` in your browser developer console.  [More help](run-the-question-code.md).
+Clone the repo to your computer and open `callbacks-workshop/index.html` in your web browser.  It should say `hello!` in your browser developer console.  [More help](../run-the-question-code.md).
 
-### Demo (15 mins)
+### Demo (10 mins)
 
-* Look at this program.  I want to understand its flow of control.  See the [Process for understanding the flow of control](#process-for-understanding-the-flow-of-control)
+* Look at the program below.  I want to understand its flow of control.
 
-* [Demo of understanding the program's flow of control.]
+1. Before running the code, I make a provisional list of the bits of code I think will get run in the order they will get run.
+
+2. I run the code.  To get more information, I add lines like `console.log(1)` and `console.log(2)` to help me see the sequence and flow of control.  I use what I learn to correct my list.
+
+* [Do demo of understanding the program's flow of control.]
 
 ```js
 var greeting;
 
-document.addEventListener("click", function() {
+$(document).click(function() {
   console.log(greeting);
 });
 
@@ -40,14 +44,14 @@ greeting = "Hi!";
 
 * Look at the program below.  I want to understand its flow of control.
 
-* [Demo of understanding the program's flow of control]
+* [Do demo of understanding the program's flow of control.]
 
 ```js
 var greeting;
 
-function runItForMe(functionToRun) {
-  // add parens to invoke passed functionToRun
-  functionToRun();
+function runItForMe(callback) {
+  // add parens to invoke passed callback
+  callback();
 };
 
 greeting = "Howdy";
@@ -67,11 +71,11 @@ How confident are you in each of the three abilities we talked about at the begi
 
 ### Workshop (30 mins)
 
-* Pair up.  Choose who will drive and who will navigate.  This will be a great opportunity to practice avoiding the breakdown of driver/navigator during  investigatory coding.  Remember the XP Values of communication, feedback, respect and courage.
+* Pair up.  Choose who will drive and who will navigate.  This will be a great opportunity to practice avoiding the breakdown of driver/navigator during investigatory coding.  Remember the XP values of communication, feedback, respect, courage and simplicity.
 
-* Put the code for question 1 (below) into `callbacks-workshop/index.js`.  Open `index.html` in your browser.  [More help](run-the-question-code.md).
+* Put the code for question 1 (below) into `callbacks-workshop/index.js`.  Open `index.html` in your browser.  [More help](../run-the-question-code.md).
 
-* Follow the process outlined in the demo to understand the flow of control of the question code.
+* Follow the process outlined in the demo to understand the flow of control of the code in the questions.
 
 * Swap driver and navigator and move onto question 2.
 
@@ -83,17 +87,11 @@ We'll come back together and talk about the questions we found interesting and a
 
 How confident are you in each of the three abilities we began the workshop with?
 
-### Process for understanding the flow of control
-
-1. Before running the code, make a provisional list of the lines or part-lines of code you think will get run in the order they will get run.
-
-2. Introspect on the code to find out if your list is correct: run the code, add print statements, use a debugger, whatever you like.
-
-3. If you find your list is wrong, update it.
-
 ### After the workshop
 
-* A developer constantly thinks about the flow of their code.  Keep trying to improve this skill and intuition.
+* A developer constantly analyses the flow of their code.  Keep trying to improve this skill.
+
+* The more you can correctly read the flow of control without running the code, the faster you'll be.  Build this intuition by making predictions and checking if your prediction is right.
 
 * To understand more about callbacks, and to get more practice following the flow of control, complete the questions you didn't have time to do in the workshop.
 
@@ -115,16 +113,16 @@ console.log(squares);
 
 ### Question 2
 
-Terminology: event listener, document object model.
+Terminology: event listener, document object model (DOM).
 
 ```js
 var keyCode;
 
-document.addEventListener("click", function() {
+$(document).click(function() {
   console.log(keyCode);
 });
 
-document.addEventListener("keydown", function(event) {
+$(document).keydown(function(event) {
   keyCode = event.keyCode;
 });
 
@@ -168,8 +166,8 @@ Terminology: callback arguments.
 ```js
 var greeting = "";
 
-function runItForMe(functionToRun) {
-  functionToRun();
+function runItForMe(callback) {
+  callback();
 };
 
 runItForMe(function(greeting) {
@@ -181,22 +179,6 @@ runItForMe(function(greeting) {
 
 ### Question 6
 
-Terminology: closures, closed over variables, mutable state.
+Write code that will `console.log` `alpha` after one second, `bravo` one second later and `charlie` one second after that.
 
-```js
-var greeting = "What's happening?";
-
-function fn1() {
-  console.log(greeting);
-};
-
-function fn2(inFn) {
-  fn1 = inFn;
-};
-
-fn2(function() {
-  console.log("Alright?");
-});
-
-fn1();
-```
+As an extra challenge, can you write your code so that increasing the delay before one `console.log` will, without changing any other code, increase the delay for the subsequent `console.log`s by the same amount? For example, if you change the code to print `alpha` after two seconds, `bravo` and `charlie` will be delayed by that extra second, too.
