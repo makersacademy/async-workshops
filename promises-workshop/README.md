@@ -278,3 +278,8 @@ after(1000)
 ### Question 6
 
 Write a program that creates a promise that sometimes fulfills and sometimes rejects.  The code that uses the promise should handle both cases.
+
+## Resources
+
+* [Promises (Mozilla)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)
+* :pill: [Promises](https://github.com/makersacademy/course/blob/master/pills/js_promises.md)
