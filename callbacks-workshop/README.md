@@ -1,6 +1,6 @@
 # Train your skill in following the flow of control while understanding the concept of callbacks
 
-## Abilities that this workshop focues on
+## Abilities that this workshop focuses on
 
 In this workshop, you'll improve your ability to:
 
@@ -24,11 +24,15 @@ Clone the repo to your computer and open `callbacks-workshop/index.html` in your
 
 ### Demo (10 mins)
 
+#### Demo 1
+
 * Look at the program below.  I want to understand its flow of control.
 
-1. Before running the code, I make a provisional list of the bits of code I think will get run in the order they will get run.
+1. Before running the code, I make a provisional list of the bits of code I think will get run in the order I think they will get run.
 
-2. I run the code.  To get more information, I add lines like `console.log(1)` and `console.log(2)` to help me see the sequence and flow of control.  I use what I learn to correct my list.
+2. I run the code.  To get more information, I add lines like `console.log(1)` and `console.log(2)` to help me see the flow of control.  I use what I learn to correct my list.
+
+#### Demo 2
 
 * [Do demo of understanding the program's flow of control.]
 
@@ -71,7 +75,7 @@ How confident are you in each of the three abilities we talked about at the begi
 
 ### Workshop (30 mins)
 
-* Pair up.  Choose who will drive and who will navigate.  This will be a great opportunity to practice avoiding the breakdown of driver/navigator during investigatory coding.  Remember the XP values of communication, feedback, respect, courage and simplicity.
+* Pair up.  Choose who will drive and who will navigate.  This will be a great opportunity to practice maintaining the driver/navigator roles during investigatory coding.  Remember the XP values of communication, feedback, respect, courage and simplicity.
 
 * Put the code for question 1 (below) into `callbacks-workshop/index.js`.  Open `index.html` in your browser.  [More help](../run-the-question-code.md).
 
@@ -89,9 +93,9 @@ How confident are you in each of the three abilities we began the workshop with?
 
 ### After the workshop
 
-* A developer constantly analyses the flow of their code.  Keep trying to improve this skill.
+* A developer constantly analyses the flow of control of their code.  Keep trying to improve this skill.
 
-* The more you can correctly read the flow of control without running the code, the faster you'll be.  Build this intuition by making predictions and checking if your prediction is right.
+* The more adept you are at reading the flow of control without running the code, the faster you'll be.  Build this intuition by making predictions and checking if your prediction is right.
 
 * To understand more about callbacks, and to get more practice following the flow of control, complete the questions you didn't have time to do in the workshop.
 
@@ -99,7 +103,7 @@ How confident are you in each of the three abilities we began the workshop with?
 
 ### Question 1
 
-Terminology: synchronous.
+Terminology: synchronous code.
 
 ```js
 var numbers = [0, 1, 2, 3, 4];

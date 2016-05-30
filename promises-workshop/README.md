@@ -2,7 +2,7 @@
 
 ## The flow of control and the flow of data
 
-This workshop builds on the previous [flow of control (callbacks) workshop](../callbacks-workshop/).  You can use that skill to help as you learn the skill of following the flow of data.
+In this workshop, you'll build on the skills you learnt in the [flow of control (callbacks) workshop](../callbacks-workshop/).  Following the flow of data supports and is supported by following the flow of control.
 
 ## Why promises
 
@@ -19,7 +19,7 @@ getPeople()
   .then(cheerForFavouriteMusic);
 ```
 
-## Abilities that this workshop focues on
+## Abilities that this workshop focuses on
 
 This workshop won't cover why promises are useful.  It will cover how they work.
 
@@ -33,11 +33,11 @@ Is the purpose and subject of this workshop clear?
 
 ### Process for understanding the flow of data
 
-This process layers on top of the process for understanding the flow of control.  See [callbacks worksheet](../callbacks-workshop/README.md) for a reminder of that process.
+This process layers on top of the process for understanding the flow of control.  See the [callbacks worksheet](../callbacks-workshop/README.md) for a reminder of that process.
 
-1. I follow the flow of control.
+1. Follow the flow of control.
 
-2. To understand my program better, I `console.log` *variables* and *function return values* to see their data.  I use more `console.log`s to follow the flow of this data through my program.
+2. `console.log` *variables* and *function return values* to see their data.  Use more `console.log`s to follow this data as it flows on through the rest of your program.
 
 ## Workshop (1 hour)
 
@@ -53,7 +53,7 @@ Clone the repo to your computer and open `promises-workshop/index.html` in your 
 
 ### Demo (15 mins)
 
-#### Demo 1: get some people
+#### Demo 1: print some people
 
 ##### With a callback
 
@@ -72,10 +72,9 @@ $.get("https://async-workshops-api.herokuapp.com/people")
   });
 ```
 
-Things to maybe `console.log`:
+Things to maybe `console.log` to get a better understanding of this code:
 
 * The return value of `get`.
-* `people`
 
 #### Demo 2: print a person's favourite music
 
@@ -101,7 +100,7 @@ $.get("https://async-workshops-api.herokuapp.com/people")
   });
 ```
 
-Things to maybe `console.log`:
+Things to maybe `console.log` to get a better understanding of this code:
 
 * `people`
 * `person`
@@ -133,7 +132,7 @@ How confident are you in each of the three abilities we talked about at the begi
 
 ### Workshop (30 mins)
 
-* Pair up.  Choose who will drive and who will navigate.  This will be a great opportunity to practice avoiding the breakdown of driver/navigator during investigatory coding.  Remember the XP values of communication, feedback, respect, courage and simplicity.
+* Pair up.  Choose who will drive and who will navigate.  This will be a great opportunity to practice maintaining the driver/navigator roles during investigatory coding.  Remember the XP values of communication, feedback, respect, courage and simplicity.
 
 * Put the code for question 1 (below) into `promises-workshop/index.js`.  Open `index.html` in your browser.  [More help](../run-the-question-code.md).
 
@@ -243,7 +242,7 @@ getPeople()
 
 ### Question 4
 
-How does the person id (`people[0].id`) become a value that allows `then` to be called? (Research topic!)
+How does the value in `people[0].id` become a value that allows `then` to be called? (Research topic!)
 
 ```js
 $.get("https://async-workshops-api.herokuapp.com/people")
