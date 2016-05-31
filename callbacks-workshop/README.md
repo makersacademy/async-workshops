@@ -101,6 +101,12 @@ How confident are you in each of the three abilities we began the workshop with?
 
 ## Questions
 
+For each of these questions:
+
+1. Before running the code, make a provisional list of the bits of code you think will get run in the order you think they will get run.  Do this on paper or in a text file.
+
+2. Run the code.  To get more information about the flow of control, add lines like `console.log(1)` and `console.log(2)`.  Use what you learn to correct your list.
+
 ### Question 1
 
 Terminology: synchronous code.
