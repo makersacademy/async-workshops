@@ -71,7 +71,7 @@ How confident are you in each of the three abilities we talked about at the begi
 
 ### Setup (5 mins)
 
-Clone the repo to your computer and open `callbacks-workshop/index.html` in your web browser.  It should say `hello!` in your browser developer console.  [More help](../run-the-question-code.md).
+Clone the repo to your computer, run `npm install` and open `callbacks-workshop/index.html` in your web browser.  It should say `hello!` in your browser developer console.  [More help](../run-the-question-code.md).
 
 ### Workshop (30 mins)
 
