@@ -26,7 +26,7 @@ By the end of the workshop, your thumbs will hopefully be a few notches higher.
 
 1. Before running the code, I make a provisional list of the bits of code I think will get run in the order I think they will get run.
 
-2. I run the code.  To get more information, I add lines like `console.log(1)` and `console.log(2)` to help me see the flow of control.  I use what I learn to correct my list.
+2. I run the code.  To get more information about the flow of control, I add lines like `console.log(1)` and `console.log(2)`.  I use what I learn to correct my list.
 
 * [Do demo of understanding the program's flow of control.]
 
