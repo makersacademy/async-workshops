@@ -28,8 +28,6 @@ By the end of the workshop, your thumbs will hopefully be a few notches higher.
 
 2. I run the code.  To get more information, I add lines like `console.log(1)` and `console.log(2)` to help me see the flow of control.  I use what I learn to correct my list.
 
-#### Demo 2
-
 * [Do demo of understanding the program's flow of control.]
 
 ```js
@@ -41,6 +39,8 @@ $(document).click(function() {
 
 greeting = "Hi!";
 ```
+
+#### Demo 2
 
 * Look at the program below.  I want to understand its flow of control.
 
