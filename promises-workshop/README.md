@@ -47,10 +47,6 @@ How confident are you in each of the three abilities above?
 
 By the end of the workshop, your thumbs will hopefully be a few notches higher.
 
-### Setup (5 mins)
-
-Clone the repo to your computer and open `promises-workshop/index.html` in your web browser.  It should say `hi!` in your browser developer console.  [More help](../run-the-question-code.md).
-
 ### Demo (15 mins)
 
 #### Demo 1: print some people
@@ -129,6 +125,10 @@ What should I `console.log` to help me fix this code?
 How confident are you in each of the three abilities we talked about at the beginning of the workshop?
 
 (Hopefully thumbs have gone up for first two items.  If not, maybe try diagramming?)
+
+### Setup (5 mins)
+
+Clone the repo to your computer and open `promises-workshop/index.html` in your web browser.  It should say `hi!` in your browser developer console.  [More help](../run-the-question-code.md).
 
 ### Workshop (30 mins)
 
