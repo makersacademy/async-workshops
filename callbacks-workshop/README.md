@@ -171,6 +171,8 @@ setTimeout(function() {
 
 ### Question 5
 
+Can you change this code so it doesn't throw an error?
+
 Terminology: callback arguments.
 
 ```js
