@@ -200,6 +200,23 @@ $.get("https://async-workshops-api.herokuapp.com/people")
 
 ### Question 2
 
+How does the value in `people[0].id` become a value that allows `then` to be called? (Research topic!)
+
+```js
+$.get("https://async-workshops-api.herokuapp.com/people")
+  .then(function(people) {
+    return people[0].id;
+  })
+  .then(function(personId) {
+    return $.get("https://async-workshops-api.herokuapp.com/people/" + personId);
+  })
+  .then(function(person) {
+    console.log(person.favouriteMusic);
+  });
+```
+
+### Question 3
+
 The code below uses promises.  Try rewriting it to use callbacks, instead.  Which is easier to read - the callbacks version or the promises version? Why?
 
 Terminology: first class functions, functional programming, functional composition.
@@ -235,23 +252,6 @@ getPeople()
   .then(getPerson)
   .then(extractFavouriteMusic)
   .then(cheerForFavouriteMusic);
-```
-
-### Question 3
-
-How does the value in `people[0].id` become a value that allows `then` to be called? (Research topic!)
-
-```js
-$.get("https://async-workshops-api.herokuapp.com/people")
-  .then(function(people) {
-    return people[0].id;
-  })
-  .then(function(personId) {
-    return $.get("https://async-workshops-api.herokuapp.com/people/" + personId);
-  })
-  .then(function(person) {
-    console.log(person.favouriteMusic);
-  });
 ```
 
 ### Question 4
