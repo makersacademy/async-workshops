@@ -120,6 +120,8 @@ $.get("https://async-workshops-api.herokuapp.com/people")
 
 ### Demo 3: a broken promise
 
+What should I `console.log` to help me fix this code?
+
 ```js
 $.get("https://async-workshops-api.herokuapp.com/people")
   .then(function(people) {
@@ -132,8 +134,6 @@ $.get("https://async-workshops-api.herokuapp.com/people")
     console.log(person.favouriteMusic);
   });
 ```
-
-What should I `console.log` to help me fix this code?
 
 ### Thumbs (1 min)
 
@@ -175,9 +175,9 @@ How confident are you in each of the three abilities we began the workshop with?
 
 ### Question 1
 
-What does this code print?
+Look at this code and predict what it will print.
 
-How are the data collated to produce the final printed value?
+Describe to your partner how the data gets collated as it flows through the program.
 
 ```js
 $.get("https://async-workshops-api.herokuapp.com/people")
@@ -218,7 +218,7 @@ console.log(cheer + " Bob Dylan");
 
 ### Question 3
 
-Try rewriting this code using callbacks.  Which is easier to read - the callbacks version or the promises version? Why?
+The code below uses promises.  Try rewriting it to use callbacks, instead.  Which is easier to read - the callbacks version or the promises version? Why?
 
 Terminology: first class functions, functional programming, functional composition.
 
@@ -274,7 +274,7 @@ $.get("https://async-workshops-api.herokuapp.com/people")
 
 ### Question 5
 
-Inspect the data in this program to figure out how it works.
+Follow the flow of data in this program to figure out how it works.
 
 ```js
 function after(delay) {
