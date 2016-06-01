@@ -37,11 +37,11 @@ Is the purpose and subject of this workshop clear?
 
 This process layers on top of the process for understanding the flow of control.  See the [callbacks worksheet](../callbacks-workshop/README.md) for a reminder.
 
-1. I follow the flow of control to understand what parts of my code will get run when.
+1. First, I follow the flow of control to understand what parts of my code will get run when.
 
 2. I imagine running my code.  I make a provisional list of the values that I think variables will have and the values that will be returned by functions.
 
-3. I `console.log` variables and function return values to see their data.  I use more `console.log`s to follow this data as it flows on through the rest of my program.
+3. I `console.log` variables and function return values to see their data.  I use more `console.log`s to follow this data as it flows on through the rest of my program.  I use this information to correct my provisional list.
 
 ## Workshop (1 hour)
 
@@ -53,11 +53,11 @@ By the end of the workshop, your thumbs will hopefully be a few notches higher.
 
 ### Demo (15 mins)
 
-#### Demo 1: print some people
+#### Demo 1: print some people's data
 
 ##### With a callback
 
-I'll demo understanding this program's flow of data.
+What does this code do?
 
 ```js
 $.get("https://async-workshops-api.herokuapp.com/people", function(people) {
@@ -69,7 +69,7 @@ $.get("https://async-workshops-api.herokuapp.com/people", function(people) {
 
 I'll demo understanding this program's flow of data.
 
-Things to maybe `console.log` to get a better understanding of this code:
+Things I could `console.log` to get a better understanding of the flow of data:
 
 * The return value of `get`.
 * The return value of `then`.
