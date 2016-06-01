@@ -116,6 +116,7 @@ $.get("https://async-workshops-api.herokuapp.com/people")
   });
 ```
 
+> Notice how, unlike the callback version, this code can be read sequentially top to bottom.
 
 ### Demo 3: a broken promise
 
