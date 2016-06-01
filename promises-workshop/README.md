@@ -200,24 +200,6 @@ $.get("https://async-workshops-api.herokuapp.com/people")
 
 ### Question 2
 
-Before running the code below, predict what it will print out.
-
-```js
-var cheer = "Wooo";
-
-$.get("https://async-workshops-api.herokuapp.com/people")
-  .then(function(people) {
-    return $.get("https://async-workshops-api.herokuapp.com/people/" + people[0].id);
-  })
-  .then(function(person) {
-    console.log(cheer + " " + person.favouriteMusic);
-  });
-
-console.log(cheer + " Bob Dylan");
-```
-
-### Question 3
-
 The code below uses promises.  Try rewriting it to use callbacks, instead.  Which is easier to read - the callbacks version or the promises version? Why?
 
 Terminology: first class functions, functional programming, functional composition.
@@ -255,7 +237,7 @@ getPeople()
   .then(cheerForFavouriteMusic);
 ```
 
-### Question 4
+### Question 3
 
 How does the value in `people[0].id` become a value that allows `then` to be called? (Research topic!)
 
@@ -272,7 +254,7 @@ $.get("https://async-workshops-api.herokuapp.com/people")
   });
 ```
 
-### Question 5
+### Question 4
 
 Follow the flow of data in this program to figure out how it works.
 
@@ -289,7 +271,7 @@ after(1000)
   })
 ```
 
-### Question 6
+### Question 5
 
 Write a program that creates a promise that sometimes fulfills and sometimes rejects.  The code that uses the promise should handle both cases.
 
