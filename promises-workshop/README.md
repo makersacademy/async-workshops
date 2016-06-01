@@ -8,7 +8,7 @@ In this workshop, you'll build on the skills you learnt in the [flow of control 
 
 * More powerful function and error composition in asynchronous code.  (Research topic!)
 
-* Clarify "callback hell" by replacing it with straight-line code.  For example:
+* Clarify "callback hell" by replacing it with straight-line code.  For example, look at this nice code that uses promises:
 
 ```js
 getPeople()
@@ -18,6 +18,8 @@ getPeople()
   .then(extractFavouriteMusic)
   .then(cheerForFavouriteMusic);
 ```
+
+> Later in the workshop, you'll write your own version of this code that uses callbacks to experience the hell for yourself.
 
 ## Abilities that this workshop focuses on
 
