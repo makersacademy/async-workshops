@@ -55,6 +55,8 @@ By the end of the workshop, your thumbs will hopefully be a few notches higher.
 
 ##### With a callback
 
+I'll demo understanding this program's flow of data.
+
 ```js
 $.get("https://async-workshops-api.herokuapp.com/people", function(people) {
   console.log(people);
@@ -63,6 +65,13 @@ $.get("https://async-workshops-api.herokuapp.com/people", function(people) {
 
 ###### With a promise
 
+I'll demo understanding this program's flow of data.
+
+Things to maybe `console.log` to get a better understanding of this code:
+
+* The return value of `get`.
+* The return value of `then`.
+
 ```js
 $.get("https://async-workshops-api.herokuapp.com/people")
   .then(function(people) {
@@ -70,13 +79,11 @@ $.get("https://async-workshops-api.herokuapp.com/people")
   });
 ```
 
-Things to maybe `console.log` to get a better understanding of this code:
-
-* The return value of `get`.
-
 #### Demo 2: print a person's favourite music
 
 ##### With callbacks
+
+I'll demo understanding this program's flow of data.
 
 ```js
 $.get("https://async-workshops-api.herokuapp.com/people", function(people) {
@@ -88,6 +95,15 @@ $.get("https://async-workshops-api.herokuapp.com/people", function(people) {
 
 ##### With promises
 
+I'll demo understanding this program's flow of data.
+
+Things to maybe `console.log` to get a better understanding of the flow of data:
+
+* `people`
+* `person`
+* The return value of the first `then` function.
+* The return value of the second `then` function.
+
 ```js
 $.get("https://async-workshops-api.herokuapp.com/people")
   .then(function(people) {
@@ -98,12 +114,6 @@ $.get("https://async-workshops-api.herokuapp.com/people")
   });
 ```
 
-Things to maybe `console.log` to get a better understanding of this code:
-
-* `people`
-* `person`
-* The return value of the first `then` function.
-* The return value of the second `then` function.
 
 ### Demo 3: a broken promise
 
