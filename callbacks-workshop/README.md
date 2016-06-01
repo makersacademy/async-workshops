@@ -176,8 +176,6 @@ Can you change this code so it doesn't throw an error?
 Terminology: callback arguments.
 
 ```js
-var greeting = "";
-
 function runItForMe(callback) {
   callback();
 };
