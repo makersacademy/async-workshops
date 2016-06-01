@@ -177,7 +177,7 @@ How confident are you in each of the three abilities we began the workshop with?
 
 Look at this code and predict what it will print.
 
-Describe to your partner how the data gets collated as it flows through the program.
+Investigate the flow of data.  Was your prediction correct? Describe to your partner how the data gets collated as it flows through the program.
 
 ```js
 $.get("https://async-workshops-api.herokuapp.com/people")
