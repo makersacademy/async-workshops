@@ -191,9 +191,7 @@ runItForMe(function(greeting) {
 
 ### Question 6
 
-Write code that will `console.log` `alpha` after one second, `bravo` one second later and `charlie` one second after that.
-
-As an extra challenge, can you write your code so that increasing the delay before one `console.log` will, without changing any other code, increase the delay for the subsequent `console.log`s by the same amount? For example, if you change the code to print `alpha` after two seconds, `bravo` and `charlie` will be delayed by that extra second, too.
+Write code that will `console.log` `alpha` after one second, `bravo` one second later and `charlie` one second after that.  Write the code so that increasing the delay before one `console.log` will, without changing any other code, increase the delay for the subsequent `console.log`s by the same amount. For example, if you change the code to print `alpha` after two seconds, `bravo` and `charlie` will automatically be delayed by that extra second, too.
 
 ## Resources
 
