@@ -35,11 +35,13 @@ Is the purpose and subject of this workshop clear?
 
 ### Process for understanding the flow of data
 
-This process layers on top of the process for understanding the flow of control.  See the [callbacks worksheet](../callbacks-workshop/README.md) for a reminder of that process.
+This process layers on top of the process for understanding the flow of control.  See the [callbacks worksheet](../callbacks-workshop/README.md) for a reminder.
 
-1. Follow the flow of control.
+1. I follow the flow of control to understand what parts of my code will get run when.
 
-2. `console.log` *variables* and *function return values* to see their data.  Use more `console.log`s to follow this data as it flows on through the rest of your program.
+2. I imagine running my code.  I make a provisional list of the values that I think variables will have and the values that will be returned by functions.
+
+3. I `console.log` variables and function return values to see their data.  I use more `console.log`s to follow this data as it flows on through the rest of my program.
 
 ## Workshop (1 hour)
 
