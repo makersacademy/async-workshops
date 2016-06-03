@@ -95,45 +95,21 @@ $.get("https://async-workshops-api.herokuapp.com/people", function(people) {
 });
 ```
 
-##### With promises
+##### With (broken) promises
 
-I'll demo understanding this program's flow of data.
-
-Things to maybe `console.log` to get a better understanding of the flow of data:
-
-* `people`
-* `person`
-* The return value of the first `then` function.
-* The return value of the second `then` function.
+I'll demo understanding this program's flow of data in order to fix it.
 
 ```js
 $.get("https://async-workshops-api.herokuapp.com/people")
   .then(function(people) {
-    return $.get("https://async-workshops-api.herokuapp.com/people/" + people[0].id);
-  })
+    $.get("https://async-workshops-api.herokuapp.com/people/" + people[0].id);
+  });
   .then(function(person) {
     console.log(person.favouriteMusic);
   });
 ```
 
-> Notice how, unlike the callback version, this code can be read sequentially top to bottom.
-
-### Demo 3: a broken promise
-
-What should I `console.log` to help me fix this code?
-
-```js
-$.get("https://async-workshops-api.herokuapp.com/people")
-  .then(function(people) {
-    people[0].id;
-  })
-  .then(function(personId) {
-    $.get("https://async-workshops-api.herokuapp.com/people/" + personId);
-  });
-  .then(function(person) {
-    console.log(person.favouriteMusic);
-  });
-```
+> Notice how, unlike the callback version, this code can be read sequentially, top to bottom.
 
 ### Thumbs (1 min)
 
