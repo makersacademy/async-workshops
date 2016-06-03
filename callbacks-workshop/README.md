@@ -22,11 +22,21 @@ By the end of the workshop, your thumbs will hopefully be a few notches higher.
 
 #### Demo 1
 
-* Look at the program below.  I want to understand its flow of control.
+* I want to understand a program's flow of control.
 
-1. Before running the code, I make a provisional list of the bits of code I think will get run in the order I think they will get run.
+1. Before running the code, I add some `console.log`s.  I log `1` in the bit of code I think will get run first, I log `2` in the bit of code I think will get run second, and so on. For example:
 
-2. I run the code.  To get more information about the flow of control, I add lines like `console.log(1)` and `console.log(2)`.  I use what I learn to correct my list.
+```js
+console.log(1);
+
+$(document).click(function() {
+  console.log(2);
+});
+
+console.log(3);
+```
+
+2. I run the code.  If the numbers don't get logged in order (1, 2, 3 etc), I examine the code and try to figure out why.  Once I understand, I update my `console.log`s to reflect the correct order.
 
 * [Do demo of understanding the program's flow of control.]
 
@@ -101,11 +111,9 @@ How confident are you in each of the three abilities we began the workshop with?
 
 ## Questions
 
-For each of these questions:
+Follow the process for understanding the flow of control that we used in the demo.
 
-1. Before running the code, make a provisional list of the bits of code you think will get run in the order you think they will get run.  Do this on paper or in a text file.
-
-2. Run the code.  To get more information about the flow of control, add lines like `console.log(1)` and `console.log(2)`.  Use what you learn to correct your list.
+For each question, the goal is to have `console.log`s in each part of the code, and for them to print numbers in order: 1, 2, 3 etc.
 
 ### Question 1
 
