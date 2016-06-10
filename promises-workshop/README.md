@@ -230,23 +230,6 @@ getPeople()
   .then(cheerForFavouriteMusic);
 ```
 
-### Question 4
-
-Follow the flow of data in this program to figure out how it works.
-
-```js
-function after(delay) {
-  return new Promise(function(resolve) {
-    setTimeout(resolve, delay);
-  });
-};
-
-after(1000)
-  .then(function() {
-    console.log("Surprise!");
-  })
-```
-
 ### Question 5
 
 Write a program that creates a promise that sometimes fulfills and sometimes rejects.  The code that uses the promise should handle both cases.
