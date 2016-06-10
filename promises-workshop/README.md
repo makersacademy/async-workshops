@@ -95,15 +95,15 @@ $.get("https://async-workshops-api.herokuapp.com/people", function(people) {
 });
 ```
 
-##### With (broken) promises
+##### With promises
 
-I'll demo understanding this program's flow of data in order to fix it.
+I'll demo understanding this program's flow of data.
 
 ```js
 $.get("https://async-workshops-api.herokuapp.com/people")
   .then(function(people) {
-    $.get("https://async-workshops-api.herokuapp.com/people/" + people[0].id);
-  });
+    return $.get("https://async-workshops-api.herokuapp.com/people/" + people[0].id);
+  })
   .then(function(person) {
     console.log(person.favouriteMusic);
   });
@@ -153,86 +153,63 @@ How confident are you in each of the three abilities we began the workshop with?
 
 Look at this code and predict what it will print.
 
-Investigate the flow of data.  Was your prediction correct? Describe to your partner how the data gets collated as it flows through the program.
+Run the code.  Was your prediction correct? Investigate the flow of control and use what you learn to correct your prediction.
 
 ```js
+console.log("howdy");
+
 $.get("https://async-workshops-api.herokuapp.com/people")
   .then(function(people) {
-    return $.get("https://async-workshops-api.herokuapp.com/people/" + people[0].id);
-  })
-  .then(function(person) {
-    return [person.favouriteMusic];
-  })
-  .then(function(favouriteMusic) {
-    return favouriteMusic.concat("Bob Dylan");
-  })
-  .then(function(favouriteMusic) {
-    return favouriteMusic.concat("Sonic Youth");
-  })
-  .then(function(favouriteMusic) {
-    console.log(favouriteMusic);
+    console.log(people);
   });
+
+console.log("hello");
 ```
 
 ### Question 2
 
-How does the value in `people[0].id` become a value that allows `then` to be called? (Research topic!)
+This code is broken.  It should print `Sunset Rubdown`, but it doesn't.
+
+Investigate the flow of control and use what you learn to fix the code.
 
 ```js
 $.get("https://async-workshops-api.herokuapp.com/people")
   .then(function(people) {
-    return people[0].id;
+    $.get("https://async-workshops-api.herokuapp.com/people/" + people[0].id);
   })
-  .then(function(personId) {
-    return $.get("https://async-workshops-api.herokuapp.com/people/" + personId);
-  })
-  .then(function(person) {
+  .when(function(person) {
     console.log(person.favouriteMusic);
   });
 ```
 
 ### Question 3
 
-The code below uses promises.  Try rewriting it to use callbacks, instead.  Which is easier to read - the callbacks version or the promises version? Why?
+Look at this code and predict what it will print.
 
-Terminology: first class functions, functional programming, functional composition.
+Run the code.  Was your prediction correct? Investigate the flow of control and use what you learn to correct your prediction.
+
+Run the code twenty times.  Does it produce the same result every time? Does this make the code more or less simple?
 
 ```js
-function first(array) {
-  return array[0];
-};
+$.get("https://async-workshops-api.herokuapp.com/people")
+  .then(function(people) {
+    $.get("https://async-workshops-api.herokuapp.com/people/" + people[0].id)
+      .then(function(person) {
+        console.log(person.favouriteMusic);
+      });
 
-function extractId(person) {
-  return person.id;
-};
-
-function extractFavouriteMusic(person) {
-  return person.favouriteMusic;
-};
-
-function cheerForFavouriteMusic(music) {
-  console.log("Wooo " + music);
-};
-
-function getPerson(id) {
-  return $.get("https://async-workshops-api.herokuapp.com/people/" + id);
-};
-
-function getPeople() {
-  return $.get("https://async-workshops-api.herokuapp.com/people");
-};
-
-getPeople()
-  .then(first)
-  .then(extractId)
-  .then(getPerson)
-  .then(extractFavouriteMusic)
-  .then(cheerForFavouriteMusic);
+    $.get("https://async-workshops-api.herokuapp.com/people/" + people[1].id)
+      .then(function(person) {
+        console.log(person.favouriteMusic);
+      });
+  });
 ```
 
-### Question 5
+### Question 4
 
-Write a program that creates a promise that sometimes fulfills and sometimes rejects.  The code that uses the promise should handle both cases.
+Write a program that prints Mary's favourite music and then prints her musical kindred spirit's favourite music.
+
+Is your code shaped like an arrow or a stack of bricks? Which would be better? Why?
 
 ## Resources
 
