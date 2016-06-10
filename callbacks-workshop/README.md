@@ -120,16 +120,46 @@ For each question, the goal is to have `console.log`s in each part of the code, 
 Terminology: synchronous code.
 
 ```js
+var greetings = ["hi", "howdy", "hey"];
+
+greetings.forEach(function(greeting) {
+  console.log(greeting);
+});
+```
+
+### Question 2
+
+Terminology: synchronous code.
+
+```js
 var numbers = [0, 1, 2, 3, 4];
 
-var squares = numbers.map(function(number) {
+function square(number) {
   return number * number;
-});
+};
+
+var squares = numbers.map(square);
 
 console.log(squares);
 ```
 
-### Question 2
+### Question 3
+
+Terminology: synchronous code.
+
+```js
+function exclaim(greeting) {
+  return greeting + "!";
+};
+
+var greetings = ["hi", "howdy", "hey"];
+
+var exclaimedGreetings = greetings.map(exclaim);
+
+console.log(exclaimedGreetings);
+```
+
+### Question 4
 
 Terminology: event listener, document object model (DOM).
 
@@ -147,7 +177,7 @@ $(document).keydown(function(event) {
 keyCode = 999999999;
 ```
 
-### Question 3
+### Question 5
 
 Terminology: event loop.
 
@@ -161,7 +191,7 @@ setTimeout(function() {
 greeting = "Yo";
 ```
 
-### Question 4
+### Question 6
 
 Terminology: event loop.
 
@@ -177,7 +207,7 @@ setTimeout(function() {
 }, Math.random() * 1000);
 ```
 
-### Question 5
+### Question 7
 
 Can you change this code so it doesn't throw an error?
 
@@ -195,9 +225,9 @@ runItForMe(function(greeting) {
 });
 ```
 
-### Question 6
+### Question 8
 
-Write code that will `console.log` `alpha` after one second, `bravo` one second later and `charlie` one second after that.  Write the code so that increasing the delay before one `console.log` will, without changing any other code, increase the delay for the subsequent `console.log`s by the same amount. For example, if you change the code to print `alpha` after two seconds, `bravo` and `charlie` will automatically be delayed by that extra second, too.
+Write code that will `console.log` `alpha` after one second, `bravo` one second later and `charlie` one second after that.  Write the code so that increasing the delay before one `console.log` will, without changing any other code, increase the delay for the subsequent `console.log`s by the same amount. For example, if you change the code to print `alpha` after two seconds, `bravo` and `charlie` should automatically be delayed by that extra second, too.
 
 ## Resources
 
